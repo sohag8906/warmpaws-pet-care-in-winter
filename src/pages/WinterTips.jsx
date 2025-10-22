@@ -55,8 +55,9 @@ const WinterTips = () => {
         "Go for walks when the sun is out and it’s a bit warmer.",
     },
   ];
-
+ 
   return (
+   
     <div className="my-14 py-10  from-blue-50 to-blue-100 rounded-2xl shadow-inner">
       <h2 className="text-4xl font-extrabold text-center text-blue-800 mb-10">
         Winter Care Tips for Pets 
