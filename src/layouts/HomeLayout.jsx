@@ -1,6 +1,10 @@
 import React from 'react';
 import { Outlet } from 'react-router';
 import Navbar from '../components/Navbar';
+import Home from '../pages/Home';
+import Hero from '../pages/Hero';
+import Rightside from '../pages/WinterTips';
+import WinterTips from '../pages/WinterTips';
 
 const HomeLayout = () => {
     return (
@@ -8,11 +12,23 @@ const HomeLayout = () => {
             <header>
                 <Navbar></Navbar>
             </header>
-            <main>
-                <section>
-                    <Outlet></Outlet>
+             <section className='liftside'>
+                    <Home></Home>
+                    <Hero></Hero>
+                    <WinterTips></WinterTips>
+
                 </section>
-                <section className='sidebar'></section>
+            <main className=''>
+               
+                <section>
+                    
+                    <Outlet>
+                        
+                    </Outlet>
+                </section>
+                <section className='sidebar'>
+                    
+                </section>
             </main>
         </div>
     );
