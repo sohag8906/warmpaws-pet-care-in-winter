@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import HomeLayout from "../layouts/HomeLayout";
 import ExpertVets from "../layouts/ExpertVets";
+import ServiceDetails from "../pages/ServiceDetails";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,17 @@ const router = createBrowserRouter([
       {
         path: 'service',
         element: <h4>Service Page</h4>
-      }
+      },
+      {
+  path: "/service/:id",
+  element: <ServiceDetails />,
+  loader: () => fetch("/services.json"),
+  errorElement: (
+    <div className="text-red-500 p-5">
+      Could not load service. Please try again later.
+    </div>
+  )
+}
     ]
   },
   {
