@@ -6,25 +6,25 @@ const ExpertVets = () => {
       id: 1,
       name: "Dr. Sarah Johnson",
       experience: "8 years experience in pet nutrition & winter care",
-      image: "https://i.postimg.cc/3rR0qfWx/vet1.jpg"
+      image: "https://i.ibb.co.com/MxZBTktJ/images-2.jpg"
     },
     {
       id: 2,
       name: "Dr. David Miller",
       experience: "5 years experience in grooming & coat health",
-      image: "https://i.postimg.cc/G3WfN4Wb/vet2.jpg"
+      image: "https://i.ibb.co.com/pBd97fMr/images-3.jpg"
     },
     {
       id: 3,
       name: "Dr. Emma Brown",
       experience: "10 years experience in pet wellness & cold protection",
-      image: "https://i.postimg.cc/tJ1Pn6hR/vet3.jpg"
+      image: "https://i.ibb.co.com/W4XHt7SM/images-4.jpg"
     },
     {
       id: 4,
       name: "Dr. Alex Carter",
       experience: "6 years experience in animal therapy and cold injury prevention",
-      image: "https://i.postimg.cc/ZnPnycYB/vet4.jpg"
+      image: "https://i.ibb.co.com/Qvnt9S9F/download-7.jpg"
     }
   ];
 
@@ -37,7 +37,7 @@ const ExpertVets = () => {
         {vets.map((vet) => (
           <div
             key={vet.id}
-            className="p-4 border rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-2 text-center bg-white"
+            className="p-4  rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-2 text-center bg-white"
           >
             <img
               src={vet.image}

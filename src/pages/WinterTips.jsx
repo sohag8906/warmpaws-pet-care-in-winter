@@ -57,9 +57,9 @@ const WinterTips = () => {
   ];
 
   return (
-    <div className="my-14 py-10 bg-gradient-to-b from-blue-50 to-blue-100 rounded-2xl shadow-inner">
+    <div className="my-14 py-10  from-blue-50 to-blue-100 rounded-2xl shadow-inner">
       <h2 className="text-4xl font-extrabold text-center text-blue-800 mb-10">
-        Winter Care Tips for Pets ❄️
+        Winter Care Tips for Pets 
       </h2>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
