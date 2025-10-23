@@ -7,6 +7,7 @@ import Login from "../pages/Login";
 import AuthLayout from "../layouts/AuthLayout";
 import Register from "../pages/Register";
 import Signup from "../pages/Signup";
+import MyProfile from "../pages/MyProfile";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
 {
   path:'/book',
   element:<BookNow></BookNow>
+},
+{
+  path:'/profile',
+  element:<MyProfile></MyProfile>
 }
     ]
   },
