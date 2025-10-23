@@ -20,6 +20,12 @@ const Login = () => {
             const errorMessage = error.message;
             alert(errorCode, errorMessage);
         })
+
+
+
+        {/* google */}
+       
+
     };
     return (
         <div className='flex justify-center mt-10 mb-10'>
@@ -38,6 +44,8 @@ const Login = () => {
                         <p className='font-semibold text-center pt-5'>Dont’t Have An Account ? <Link className='text-secondary underline' to='/auth/register'>Register</Link> </p>
                     </fieldset>
                 </form>
+               
+                <button>google</button>
             </div>
         </div>
     );
