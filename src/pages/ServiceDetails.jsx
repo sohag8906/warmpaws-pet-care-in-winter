@@ -37,7 +37,7 @@ const ServiceDetails = () => {
 
             {/* Book Now Button */}
             <Link
-              to={`/book/${service.serviceId}`}
+              to={'/book'}
               className="w-full block text-center bg-blue-500 text-white py-2 rounded-lg font-semibold hover:bg-blue-600"
             >
               Book Now

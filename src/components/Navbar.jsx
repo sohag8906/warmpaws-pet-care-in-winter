@@ -8,7 +8,7 @@ const Navbar = () => {
     const links = <>
                   <ul className=" flex flex-col md:flex-row justify-between gap-6 font-semibold">
                <Link to="/"><li>Home</li></Link>
-                 <Link to="/services"><li>Services</li></Link>
+                 <Link to="/service/:id"><li>Services</li></Link>
                 <Link to="/profile"><li>My Profile</li></Link>
               </ul>
                </>

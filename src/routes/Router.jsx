@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import HomeLayout from "../layouts/HomeLayout";
 import ExpertVets from "../layouts/ExpertVets";
 import ServiceDetails from "../pages/ServiceDetails";
+import BookNow from "../pages/BookNow";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       Could not load service. Please try again later.
     </div>
   )
+},
+{
+  path:'/book',
+  element:<BookNow></BookNow>
 }
     ]
   },
