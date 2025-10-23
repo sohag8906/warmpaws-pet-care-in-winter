@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Link } from 'react-router';
 import logo from '../assets/pet-care-logo.jpg'
+import userimage from '../assets/user.png'
+import { AuthConntext } from '../provider/AuthProvider';
 
 
 
 const Navbar = () => {
+  const {user} = use(AuthConntext);
+  
     const links = <>
+    
                   <ul className=" flex flex-col md:flex-row justify-between gap-6 font-semibold">
                <Link to="/"><li>Home</li></Link>
                  <Link to="/service/:id"><li>Services</li></Link>
@@ -13,8 +18,13 @@ const Navbar = () => {
               </ul>
                </>
     return (
+       
         <div className="navbar bg-base-100 shadow-sm">
+          <div className='gap-5'>{user && user.email}</div>
+    
+         
   <div className="navbar-start">
+    
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
@@ -36,7 +46,14 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
+    <div className='flex gap-3'>
+   <img src={userimage} alt="" />
+   
+    <Link to='/auth/login'>
     <a className="btn bg-primary text-white"> Login</a>
+    </Link>
+    </div>
+    
   </div>
 </div>
     );

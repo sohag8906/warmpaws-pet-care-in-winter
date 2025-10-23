@@ -3,6 +3,9 @@ import HomeLayout from "../layouts/HomeLayout";
 import ExpertVets from "../layouts/ExpertVets";
 import ServiceDetails from "../pages/ServiceDetails";
 import BookNow from "../pages/BookNow";
+import Login from "../pages/Login";
+import AuthLayout from "../layouts/AuthLayout";
+import Register from "../pages/Register";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +40,19 @@ const router = createBrowserRouter([
   element:<BookNow></BookNow>
 }
     ]
+  },
+  {
+     path:'/auth',
+     element: <AuthLayout></AuthLayout>,
+     children:[
+      {
+        path:'/auth/login',
+        element:<Login></Login>
+      },{
+        path:'/auth/register',
+        element:<Register></Register>
+      }
+     ]
   },
   {
     path: '*',
