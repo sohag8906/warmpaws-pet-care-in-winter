@@ -6,6 +6,7 @@ import BookNow from "../pages/BookNow";
 import Login from "../pages/Login";
 import AuthLayout from "../layouts/AuthLayout";
 import Register from "../pages/Register";
+import Signup from "../pages/Signup";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
         element: <ExpertVets />
       },
       {
-        path: 'service',
+        path: 'se',
         element: <h4>Service Page</h4>
       },
       {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       },{
         path:'/auth/register',
         element:<Register></Register>
+      },
+      {
+        path:"/auth/signup",
+        element:<Signup></Signup>
       }
      ]
   },
