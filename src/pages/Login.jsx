@@ -1,11 +1,14 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthConntext } from '../provider/AuthProvider';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import { auth } from "../firebase/firebase.config"; // path ঠিক আছে
+import { auth } from "../firebase/firebase.config";
 
 const Login = () => {
     const { signIn } = useContext(AuthConntext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/home"; // আগের পেজ
 
     // Email/Password login
     const handleLogin = (e) => {
@@ -19,6 +22,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log("Email login user:", user);
+                navigate(from, { replace: true }); // login successful → আগের page বা home
             })
             .catch(error => {
                 alert(error.message);
@@ -32,7 +36,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log("Google login user:", user);
-                // চাইলে এখানে redirect দিতে পারো
+                navigate(from, { replace: true }); // Google login → আগের page বা home
             })
             .catch(error => {
                 console.error("Google login error:", error.message);
@@ -45,7 +49,6 @@ const Login = () => {
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl py-5">
                 <h2 className='text-2xl font-bold text-center'>Login your account</h2>
 
-                {/* Email/Password Form */}
                 <form onSubmit={handleLogin} className="card-body">
                     <fieldset className="fieldset">
                         <label className="label">Email</label>
@@ -65,7 +68,6 @@ const Login = () => {
                     </fieldset>
                 </form>
 
-                {/* Google Login Button */}
                 <button
                     onClick={handleGoogleLogin}
                     className="btn bg-white text-black border-[#e5e5e5] flex items-center justify-center gap-2 mt-3 w-full"

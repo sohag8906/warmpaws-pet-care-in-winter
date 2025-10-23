@@ -1,8 +1,12 @@
-import React from "react";
-import { Link, useLoaderData } from "react-router-dom"; // router-dom থেকে import
+import React, { useContext } from "react";
+import { Link, useLoaderData, useNavigate, useLocation } from "react-router-dom";
+import { AuthConntext } from "../provider/AuthProvider";
 
 const Hero = () => {
-  const services = useLoaderData() || []; // যদি undefined আসে, empty array হবে
+  const services = useLoaderData() || [];
+  const { user } = useContext(AuthConntext);
+  const navigate = useNavigate();
+  const location = useLocation(); // বর্তমান পেজের info
 
   return (
     <div className="container mx-auto px-4 my-10">
@@ -11,7 +15,14 @@ const Hero = () => {
         {services.map((service) => (
           <div
             key={service.serviceId}
-            className="border rounded-xl p-4 shadow hover:shadow-lg transition"
+            className="border rounded-xl p-4 shadow hover:shadow-lg transition cursor-pointer"
+            onClick={() => {
+              if (!user) {
+                alert("Please login first to view details!");
+                // login page-এ navigate করার সময় current page path পাঠানো
+                navigate("/auth/login", { state: { from: location } });
+              }
+            }}
           >
             <img
               src={service.image}
@@ -24,7 +35,6 @@ const Hero = () => {
               <p className="text-green-600 font-bold">Price: ${service.price}</p>
             </div>
 
-            {/* View Details button */}
             <Link
               to={`/service/${service.serviceId}`}
               className="mt-5 w-full px-4 py-2 bg-blue-500 rounded-lg text-white font-semibold hover:bg-blue-600 inline-block text-center"
