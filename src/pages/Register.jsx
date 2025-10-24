@@ -1,9 +1,11 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom'; // ✅ useNavigate import
 import { AuthConntext } from '../provider/AuthProvider';
 
 const Register = () => {
   const { createUser, setUser } = useContext(AuthConntext);
+  const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate(); // ✅ navigate hook
 
   const handleRegiste = (e) => {
     e.preventDefault();
@@ -13,7 +15,6 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    // Password validation
     const uppercase = /[A-Z]/;
     const lowercase = /[a-z]/;
 
@@ -30,13 +31,14 @@ const Register = () => {
       return;
     }
 
-    // If all checks pass, create user
     createUser(email, password)
       .then(result => {
         const user = result.user;
         setUser(user);
         alert("User registered successfully!");
-        form.reset(); // clear the form
+        form.reset();
+
+        navigate('/'); // ✅ register successful → home page
       })
       .catch((error) => {
         alert(error.message);
@@ -59,7 +61,22 @@ const Register = () => {
             <input name='email' type="email" className="input" placeholder="Email" required />
 
             <label className="label">Password</label>
-            <input name='password' type="password" className="input" placeholder="Password" required />
+            <div className="relative">
+              <input 
+                name='password' 
+                type={showPassword ? "text" : "password"} 
+                className="input w-full pr-10" 
+                placeholder="Password" 
+                required 
+              />
+              <button 
+                type="button" 
+                className="absolute right-2 top-2 text-gray-500" 
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? "🙈" : "👁️"}
+              </button>
+            </div>
 
             <button type='submit' className="btn btn-neutral mt-4">Register</button>
             <p className='font-semibold text-center pt-5'>

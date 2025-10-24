@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar bg-base-100 shadow-sm">
-      <div className="gap-5">{user && user.email}</div>
+      
 
       <div className="navbar-start">
         <div className="dropdown">

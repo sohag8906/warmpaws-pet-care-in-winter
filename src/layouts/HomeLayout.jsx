@@ -6,6 +6,7 @@ import Home from '../pages/Home';
 import Hero from '../pages/Hero';
 import WinterTips from '../pages/WinterTips';
 import Footer from '../components/Footer';
+import HomeExtraSection from '../pages/HomeExtraSection';
 
 const HomeLayout = () => {
     const location = useLocation();
@@ -23,7 +24,9 @@ const HomeLayout = () => {
                 <section className='liftside'>
                     <Home />
                     <Hero />
+                    <HomeExtraSection></HomeExtraSection>
                     <WinterTips />
+                    
                 </section>
             )}
 

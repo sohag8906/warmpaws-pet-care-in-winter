@@ -8,6 +8,7 @@ import AuthLayout from "../layouts/AuthLayout";
 import Register from "../pages/Register";
 import Signup from "../pages/Signup";
 import MyProfile from "../pages/MyProfile";
+import ForgotPassword from "../pages/ForgotPassword";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
 {
   path:'/profile',
   element:<MyProfile></MyProfile>
+},
+{
+path:'/auth/forgot-password',
+element:<ForgotPassword></ForgotPassword>
 }
     ]
   },
