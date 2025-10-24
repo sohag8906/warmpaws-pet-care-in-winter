@@ -9,15 +9,12 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleLogOut = () => {
-    console.log('user trying to LogOut');
     logOut()
       .then(() => {
         alert('You Logged Out Successfully');
-        navigate('/'); // Logout এর পরে Home page-এ নেভিগেট করবে
+        navigate('/');
       })
-      .catch((error) => {
-        console.log(error);
-      });
+      .catch((error) => console.log(error));
   };
 
   const links = (
@@ -30,8 +27,6 @@ const Navbar = () => {
 
   return (
     <div className="navbar bg-base-100 shadow-sm">
-      
-
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -41,7 +36,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow"
           >
             {links}
           </ul>
@@ -56,8 +51,23 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end">
-        <div className="flex gap-3 items-center">
-          <img src={userimage} alt="user" className="w-10 h-10 rounded-full" />
+        <div className="flex gap-3 items-center relative">
+          {user ? (
+            <div className="relative group">
+              {/* User Avatar */}
+              <img
+                src={user.photoURL || userimage}
+                alt={user.displayName || "User"}
+                className="w-10 h-10 rounded-full cursor-pointer border-2 border-blue-400"
+              />
+              {/* Hover করলে নাম দেখাবে */}
+              <span className="absolute bottom-12 left-1/2 -translate-x-1/2 bg-black text-white text-sm px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap z-50">
+                {user.displayName || "User"}
+              </span>
+            </div>
+          ) : (
+            <img src={userimage} alt="user" className="w-10 h-10 rounded-full" />
+          )}
 
           {user ? (
             <button onClick={handleLogOut} className="btn bg-primary text-white">

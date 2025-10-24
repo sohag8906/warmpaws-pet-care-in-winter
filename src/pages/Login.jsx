@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthConntext } from '../provider/AuthProvider';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { auth } from "../firebase/firebase.config";
+import { FcGoogle } from 'react-icons/fc';
 
 const Login = () => {
   const { signIn } = useContext(AuthConntext);
@@ -82,12 +83,13 @@ const Login = () => {
           </p>
         </form>
 
-        <button
-          onClick={handleGoogleLogin}
-          className="btn bg-white text-black border-[#e5e5e5] flex items-center justify-center gap-2 mt-3 w-full"
-        >
-          Login with Google
-        </button>
+      <button
+  onClick={handleGoogleLogin}
+  className="btn bg-white text-black border-[#e5e5e5] flex items-center justify-center gap-2 mt-3 w-full"
+>
+  <FcGoogle className="w-5 h-5" />
+  Login with Google
+</button>
       </div>
     </div>
   );
