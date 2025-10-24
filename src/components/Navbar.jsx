@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import logo from '../assets/pet-care-logo.jpg';
 import userimage from '../assets/user.png';
 import { AuthConntext } from '../provider/AuthProvider';
@@ -18,10 +18,38 @@ const Navbar = () => {
   };
 
   const links = (
-    <ul className="flex flex-col md:flex-row justify-between gap-6 font-semibold">
-      <Link to="/"><li>Home</li></Link>
-      <Link to="/service/:id"><li>Services</li></Link>
-      <Link to="/profile"><li>My Profile</li></Link>
+    <ul className="flex flex-col md:flex-row justify-between  gap-6 font-semibold">
+     
+      <NavLink 
+            to="/" 
+            className={({ isActive }) => 
+                isActive 
+                ? "font-medium m-2 text-[#632EE3] underline underline-offset-4 [text-decoration-thickness:1px]" 
+                : "font-medium m-2 text-black hover:text-[#632EE3] transition duration-300"
+            }
+        >
+            Home
+        </NavLink>
+      <NavLink 
+            to="/service/:id" 
+            className={({ isActive }) => 
+                isActive 
+                ? "font-medium m-2 text-[#632EE3] underline underline-offset-4 [text-decoration-thickness:1px]" 
+                : "font-medium m-2 text-black hover:text-[#632EE3] transition duration-300"
+            }
+        >
+           Services
+        </NavLink>
+      <NavLink 
+            to="/profile" 
+            className={({ isActive }) => 
+                isActive 
+                ? "font-medium m-2 text-[#632EE3] underline underline-offset-4 [text-decoration-thickness:1px]" 
+                : "font-medium m-2 text-black hover:text-[#632EE3] transition duration-300"
+            }
+        >
+            My Profile
+        </NavLink>
     </ul>
   );
 
@@ -70,15 +98,15 @@ const Navbar = () => {
           )}
 
           {user ? (
-            <button onClick={handleLogOut} className="btn bg-primary text-white">
+            <button onClick={handleLogOut} className="btn rounded-xl  bg-blue-400 text-white">
               LogOut
             </button>
           ) : (
             <>
-              <button onClick={() => navigate('/auth/login')} className="btn bg-primary text-white">
+              <button onClick={() => navigate('/auth/login')} className="btn rounded-xl bg-blue-400 text-white">
                 Login
               </button>
-              <button onClick={() => navigate('/auth/signup')} className="btn bg-secondary text-white">
+              <button onClick={() => navigate('/auth/signup')} className="btn rounded-xl bg-red-400 text-white">
                 SignUp
               </button>
             </>

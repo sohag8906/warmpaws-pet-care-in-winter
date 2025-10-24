@@ -49,7 +49,8 @@ const router = createBrowserRouter([
 {
 path:'/auth/forgot-password',
 element:<ForgotPassword></ForgotPassword>
-}
+},
+
     ]
   },
   {
@@ -66,12 +67,15 @@ element:<ForgotPassword></ForgotPassword>
       {
         path:"/auth/signup",
         element:<Signup></Signup>
-      }
+      },
+      
      ]
   },
   {
     path: '*',
-    element: <h3>Error 404 - Page Not Found</h3>
+    element:<h2 className="text-5xl font-bold items-center text-center">error 404</h2>
+    
+
   }
 ]);
 

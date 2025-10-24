@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { Link } from 'react-router';
 
 const Footer = () => {
   return (
@@ -17,17 +18,17 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-semibold mb-4 text-yellow-400">Quick Links</h3>
           <ul className="space-y-2 text-gray-300">
-            <li className="hover:text-yellow-400 cursor-pointer transition">Home</li>
-            <li className="hover:text-yellow-400 cursor-pointer transition">Services</li>
-            <li className="hover:text-yellow-400 cursor-pointer transition">My Profile</li>
+           <Link to='/'> <li className="hover:text-yellow-400 cursor-pointer transition">Home</li></Link>
+            <Link to='/service/:id'> <li className="hover:text-yellow-400 cursor-pointer transition">Services</li></Link>
+            <Link to='/profile'> <li className="hover:text-yellow-400 cursor-pointer transition">My Profile</li></Link>
           </ul>
         </div>
 
         {/* Contact Info */}
         <div>
           <h3 className="text-xl font-semibold mb-4 text-yellow-400">Contact Info</h3>
-          <p>Email: <a href="mailto:info@warmpaws.com" className="hover:text-yellow-400">info@warmpaws.com</a></p>
-          <p>Phone: <a href="tel:+880123456789" className="hover:text-yellow-400">+880 1234-56789</a></p>
+          <p>Email: <a href="mailto:info@warmpaws.com" className="hover:text-yellow-400">sohaggaji07@gmail.com</a></p>
+          <p>Phone: <a href="tel:+880123456789" className="hover:text-yellow-400">+880 1933067666</a></p>
           <p>Address: Dhaka, Bangladesh</p>
         </div>
 

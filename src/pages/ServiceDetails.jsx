@@ -15,7 +15,7 @@ const ServiceDetails = () => {
         {services.map((service) => (
           <div
             key={service.serviceId}
-            className="border rounded-2xl shadow-lg p-4 hover:shadow-xl transition"
+            className=" rounded-2xl shadow-lg p-4 hover:shadow-xl transition"
           >
             {/* Service Image */}
             <img

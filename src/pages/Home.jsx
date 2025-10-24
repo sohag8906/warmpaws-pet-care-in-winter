@@ -4,10 +4,14 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import cat from '../assets/images1.jpg'
-import cat2 from '../assets/image2.jpg'
+
 import dog from '../assets/doge1.jpg'
 import dog2 from '../assets/dog-2.webp'
+import newcat from '../assets/cat5.jpg';
+import newdog from '../assets/dog66 (5).jpg';
+import cat3 from '../assets/cat888.jpg'
+import cat4 from '../assets/999.jpg';
+
 
 const Home = () => {
   return (
@@ -27,14 +31,14 @@ const Home = () => {
             {/* Left Image */}
             <div className="w-full md:w-1/2 h-[200px] md:h-full p-2 relative">
               <img
-                src={cat}
+                src={cat3}
                 alt="Cute Cat"
                 className="w-full h-[400px] object-cover rounded-xl"
               />
               {/* Centered Overlay Text */}
               <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 p-4 rounded-xl text-white text-center">
-                <h2 className="text-xl md:text-2xl font-bold">Cute Cats</h2>
-                <p className="text-sm md:text-base">They will be your best companions on cold winter days.</p>
+                <h2 className="text-xl md:text-5xl font-bold">Cute Cats</h2>
+                <p className="text-3xl mt-4 md:text-base">They will be your best companions on cold winter days.</p>
               </div>
             </div>
 
@@ -46,8 +50,8 @@ const Home = () => {
                 className="w-full h-[400px] object-cover rounded-xl"
               />
               <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 p-4 rounded-xl text-white text-center">
-                <h2 className="text-xl md:text-2xl font-bold">Happy Dogs</h2>
-                <p className="text-sm md:text-base">Playful, loving, and always ready to cuddle.</p>
+                <h2 className="text-xl md:text-5xl font-bold">Happy Dogs</h2>
+                <p className="text-3xl mt-4 md:text-base">Playful, loving, and always ready to cuddle.</p>
               </div>
             </div>
           </div>
@@ -60,13 +64,13 @@ const Home = () => {
             {/* Left Image */}
             <div className="w-full md:w-1/2 h-[200px] md:h-full p-2 relative">
               <img
-                src={cat2}
+                src={cat4}
                 alt="Winter Cat"
                 className="w-full h-[400px] object-cover rounded-xl"
               />
               <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 p-4 rounded-xl text-white text-center">
-                <h2 className="text-xl md:text-2xl font-bold">Winter Cats</h2>
-                <p className="text-sm md:text-base">Perfect companions for chilly days.</p>
+                <h2 className="text-xl md:text-5xl font-bold">Winter Cats</h2>
+                <p className="text-3xl mt-4 md:text-base">Perfect companions for chilly days.</p>
               </div>
             </div>
 
@@ -78,8 +82,8 @@ const Home = () => {
                 className="w-full h-[400px] object-cover rounded-xl"
               />
               <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 p-4 rounded-xl text-white text-center">
-                <h2 className="text-xl md:text-2xl font-bold">Joyful Dogs</h2>
-                <p className="text-sm md:text-base">Bringing happiness and energy to your home.</p>
+                <h2 className="text-xl md:text-5xl font-bold">Joyful Dogs</h2>
+                <p className="text-3xl mt-4 md:text-base">Bringing happiness and energy to your home.</p>
               </div>
             </div>
           </div>
@@ -92,26 +96,26 @@ const Home = () => {
             {/* Left Image */}
             <div className="w-full md:w-1/2 h-[200px] md:h-full p-2 relative">
               <img
-                src={cat}
+                src={newcat}
                 alt="Lovely Cat"
                 className="w-full h-[400px] object-cover rounded-xl"
               />
               <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 p-4 rounded-xl text-white text-center">
-                <h2 className="text-xl md:text-2xl font-bold">Lovely Cats</h2>
-                <p className="text-sm md:text-base">Soft, cuddly, and full of love.</p>
+                <h2 className="text-xl md:text-5xl font-bold">Lovely Cats</h2>
+                <p className="text-3xl mt-4 md:text-base">Soft, cuddly, and full of love.</p>
               </div>
             </div>
 
             {/* Right Image */}
             <div className="w-full md:w-1/2 h-[200px] md:h-full p-2 relative">
               <img
-                src={dog2}
+                src={newdog}
                 alt="Friendly Dog"
                 className="w-full h-[400px] object-cover rounded-xl"
               />
               <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 p-4 rounded-xl text-white text-center">
-                <h2 className="text-xl md:text-2xl font-bold">Friendly Dogs</h2>
-                <p className="text-sm md:text-base">Always ready to brighten your day.</p>
+                <h2 className="text-xl md:text-5xl font-bold">Friendly Dogs</h2>
+                <p className="text-3xl mt-4 md:text-base">Always ready to brighten your day.</p>
               </div>
             </div>
           </div>

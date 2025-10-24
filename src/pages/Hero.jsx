@@ -15,7 +15,7 @@ const Hero = () => {
         {services.map((service) => (
           <div
             key={service.serviceId}
-            className="border rounded-xl p-4 shadow hover:shadow-lg transition cursor-pointer"
+            className=" rounded-xl p-4 shadow hover:shadow-lg transition cursor-pointer"
             onClick={() => {
               if (!user) {
                 alert("Please login first to view details!");

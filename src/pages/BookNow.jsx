@@ -65,7 +65,7 @@ const BookNow = () => {
         {/* Back Button at the bottom */}
         <button
           onClick={() => navigate(-1)}
-          className="mt-6 text-center bg-primary  w-full py-2 text-white hover:bg-blue-400 hover:underline rounded-xl border border-blue-300"
+          className="mt-6 text-center bg-primary font-bold  w-full py-2 text-white hover:bg-blue-400 hover:underline rounded-xl border border-blue-300"
         >
           &larr; Back
         </button>
