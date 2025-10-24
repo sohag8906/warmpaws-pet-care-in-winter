@@ -9,22 +9,17 @@ const MyProfile = () => {
   const [photoURL, setPhotoURL] = useState(user?.photoURL || "");
 
   const handleUpdate = () => {
-    updateProfile(user, { displayName: name, photoURL: photoURL })
-      .then(() => {
-        toast.success("Profile updated successfully!");
-      })
-      .catch((err) => {
-        toast.error("Profile update failed: " + err.message);
-      });
+    updateProfile(user, { displayName: name, photoURL })
+      .then(() => toast.success("Profile updated successfully!"))
+      .catch((err) => toast.error(err.message));
   };
 
   return (
     <div className="container mx-auto px-4 py-10">
       <h2 className="text-3xl font-bold mb-6 text-center">My Profile</h2>
-
       <div className="max-w-md mx-auto bg-white shadow-md rounded-xl p-6 flex flex-col items-center gap-4">
         <img
-          src={photoURL || "https://via.placeholder.com/150"}
+          src={photoURL?.replace("s96-c", "s200") || "https://via.placeholder.com/150"}
           alt={name || "User"}
           className="w-32 h-32 rounded-full object-cover"
         />
@@ -42,6 +37,7 @@ const MyProfile = () => {
           placeholder="Photo URL"
           className="input input-bordered w-full"
         />
+        <p>Email: {user?.email}</p>
         <button onClick={handleUpdate} className="btn btn-primary w-full mt-2">
           Update Profile
         </button>
