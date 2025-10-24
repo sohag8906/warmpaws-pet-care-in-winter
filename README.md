@@ -1,16 +1,67 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#  WarmPaws – Pet Care in Winter
 
-Currently, two official plugins are available:
+A modern React + Firebase web app that helps pet owners take care of their pets during the winter season.  
+Users can explore winter pet care services, view details, book services, and manage their profiles securely.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+##  Purpose
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**WarmPaws** is designed to help pet owners easily find and book essential pet care services for winter — such as grooming, nutrition, and health checkups — all from one place.  
+The app also includes authentication (email/password & Google login), protected routes, and user profile management.
+
+---
+
+## ✨ Key Features
+
+✅ Responsive and mobile-friendly UI  
+✅ Firebase Authentication (Email/Password + Google Login)  
+✅ Protected routes for logged-in users  
+✅ “Book Now” service booking simulation  
+✅ Password reset functionality  
+✅ Dynamic service details page  
+✅ Profile update with name & photo URL  
+✅ Toast notifications for success/error messages  
+✅ React Router v6 navigation  
+✅ Beautiful UI using Tailwind CSS + DaisyUI  
+
+---
+
+##  Technologies Used
+
+- **React (Vite)**
+- **React Router DOM**
+- **Firebase Authentication**
+- **Tailwind CSS**
+- **DaisyUI**
+- **React Icons**
+- **React Hot Toast**
+
+---
+
+## 📦 NPM Packages Used
+
+| Package Name | Purpose |
+|---------------|----------|
+| `firebase` | For authentication & app config |
+| `react-router-dom` | Routing and navigation |
+| `react-hot-toast` | Beautiful toast notifications |
+| `react-icons` | Icons used in UI |
+| `daisyui` | Tailwind-based UI components |
+| `swiper` | (If used) for service carousel |
+| `react` & `react-dom` | React core libraries |
+
+---.
+
+##  Setup & Installation
+
+To get started with the project locally, follow these steps:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/sohag8906/warmpaws-pet-care-in-winter.git
+

@@ -8,6 +8,7 @@ import WinterTips from '../pages/WinterTips';
 import Footer from '../components/Footer';
 import HomeExtraSection from '../pages/HomeExtraSection';
 
+
 const HomeLayout = () => {
     const location = useLocation();
     const showBanner = location.pathname === '/';
@@ -32,7 +33,7 @@ const HomeLayout = () => {
 
             {/* Child routes */}
             <main className='flex flex-col flex-grow'>
-                <Outlet />
+                 <Outlet></Outlet>
             </main>
 
             {/* Footer সব page এ */}
