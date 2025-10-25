@@ -33,14 +33,35 @@ const Footer = () => {
         </div>
 
         {/* Social Links */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4 text-yellow-400">Follow Us</h3>
-          <div className="flex gap-4 text-2xl">
-            <FaFacebookF className="hover:text-yellow-400 cursor-pointer transition" />
-            <FaTwitter className="hover:text-yellow-400 cursor-pointer transition" />
-            <FaInstagram className="hover:text-yellow-400 cursor-pointer transition" />
-          </div>
-        </div>
+       <div>
+  <h3 className="text-xl font-semibold mb-4 text-yellow-400">Follow Us</h3>
+  <div className="flex gap-4 text-2xl">
+    <a
+      href="https://www.facebook.com/sohag.gaji.14473"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-yellow-400 transition"
+    >
+      <FaFacebookF />
+    </a>
+    <a
+      href="https://twitter.com/yourusername"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-yellow-400 transition"
+    >
+      <FaTwitter />
+    </a>
+    <a
+      href="https://www.instagram.com/yourusername"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-yellow-400 transition"
+    >
+      <FaInstagram />
+    </a>
+  </div>
+</div>
       </div>
 
       {/* Bottom section */}

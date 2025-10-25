@@ -10,8 +10,11 @@ const Hero = () => {
 
   return (
     <div className="container mx-auto px-4 my-10">
-      <h2 className="text-3xl font-bold mb-6">Popular Winter Services</h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <h2 className="text-3xl font-bold mb-3">Popular Winter Services</h2>
+      <p className="text-gray-600 mb-6 text-center">
+     Keep your furry friends warm, happy, and healthy this winter with our top-rated pet care services.
+   </p>
+      <div className="grid mt-4 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service) => (
           <div
             key={service.serviceId}

@@ -10,7 +10,10 @@ const ServiceDetails = () => {
 
   return (
     <div className="container mx-auto px-4 my-10">
-      <h2 className="text-3xl font-bold mb-6 text-center">Service Details</h2>
+      <h2 className="text-3xl font-bold mb-4 text-center">Service Details</h2>
+      <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+      Explore all the details about our pet care services designed to keep your furry friends warm, happy, and healthy during winter.
+    </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
         {services.map((service) => (

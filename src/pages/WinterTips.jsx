@@ -21,9 +21,12 @@ const WinterTips = () => {
 
   return (
     <div className="my-14 py-10 bg-gradient-to-b from-blue-50 to-blue-100 rounded-2xl shadow-inner">
-      <h2 className="text-4xl font-extrabold text-center text-blue-800 mb-10">
+      <h2 className="text-4xl font-extrabold text-center text-blue-800 mb-5">
         Winter Care Tips for Pets
       </h2>
+      <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
+       Help your furry friends stay cozy, healthy, and active during the cold season with these easy winter care tips.
+      </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
         {tips.map((tip) => (
