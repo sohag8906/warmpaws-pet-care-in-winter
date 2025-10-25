@@ -15,12 +15,12 @@ const HomeLayout = () => {
 
     return (
         <div className='flex flex-col min-h-screen'>
-            {/* Navbar সব page এ */}
+            {/* Navbar all page */}
             <header>
                 <Navbar />
             </header>
 
-            {/* শুধু homepage এ Banner/hero দেখাবে */}
+            {/*  homepage Banner/hero  */}
             {showBanner && (
                 <section className='liftside'>
                     <Home />
@@ -36,7 +36,7 @@ const HomeLayout = () => {
                  <Outlet></Outlet>
             </main>
 
-            {/* Footer সব page এ */}
+            
             <footer>
                 <Footer />
             </footer>

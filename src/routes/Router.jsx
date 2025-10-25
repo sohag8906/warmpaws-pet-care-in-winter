@@ -76,21 +76,21 @@ element:<ForgotPassword></ForgotPassword>
   path: "*",
   element: (
     <div className="flex flex-col justify-center items-center min-h-screen bg-gray-100 p-4">
-      {/* 404 Image */}
+      
       <img
         src={errorimg}
         alt="404 Not Found"
         className="w-1/2 max-w-sm mb-6"
       />
 
-      {/* Error Text */}
+      
       <h2 className="text-4xl font-bold mt-2 mb-4 text-center">
         404 - Page Not Found
       </h2>
 
-      {/* Home Button */}
+      
       <button
-        onClick={() => window.location.href = "/"} // হোমে redirect
+        onClick={() => window.location.href = "/"} 
         className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition"
       >
         Go Home

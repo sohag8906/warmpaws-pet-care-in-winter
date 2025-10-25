@@ -9,7 +9,7 @@ const Login = () => {
   const { signIn } = useContext(AuthConntext);
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location.state?.from?.pathname || "/"; // Home page default
+  const from = location.state?.from?.pathname || "/"; 
 
   const [showPassword, setShowPassword] = useState(false);
 
@@ -23,7 +23,7 @@ const Login = () => {
       .then(result => {
         const user = result.user;
         alert("✅ Login Successful!");
-        navigate(from, { replace: true }); // আগের পেজ বা হোমে যাবে
+        navigate(from, { replace: true }); 
       })
       .catch(error => {
         alert("❌ Login Failed: " + error.message);

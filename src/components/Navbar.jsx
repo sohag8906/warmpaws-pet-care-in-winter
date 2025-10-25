@@ -88,7 +88,7 @@ const Navbar = () => {
                 alt={user.displayName || "User"}
                 className="w-10 h-10 rounded-full cursor-pointer border-2 border-blue-400"
               />
-              {/* Hover করলে নাম দেখাবে */}
+              {/* Hover*/}
               <span className="absolute bottom-12 left-1/2 -translate-x-1/2 bg-black text-white text-sm px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap z-50">
                 {user.displayName || "User"}
               </span>
